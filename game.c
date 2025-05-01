@@ -98,7 +98,7 @@ void mostrar_info(calcular calc) {
     } else {
         sprintf(op, "operacao invalida");
     }
-    printf("valor1: %d\n, valor2: %d\n, dificuldade: %d\n, operacao: %s\n", calc.valor1, calc.valor2, calc.dificuldade, op);
+    printf("valor1: %d\n  valor2: %d\n  dificuldade: %d\n  operacao: %s\n", calc.valor1, calc.valor2, calc.dificuldade, op);
 }
 
 int somar(int resposta, calcular calc) {
