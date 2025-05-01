@@ -61,20 +61,42 @@ void jogar(){
    scanf("%d", &resposta);
     if(somar(resposta,calc)){
       pontos= pontos + 1;
-      printf("voce tem %d pontos\n",pontos);
+      printf("voce tem %d pontos.\n",pontos);
     }
   }
   else if (calc.operacao == 1){
-   
+   printf("qual o valor de %d - %d:");
+   scanf("%d", &resposta);
+     if(subtracao(resposta,calc)){
+       pontos= pontos + 1;
+       printf("voce tem %d pontos.\n",pontos);
  }
+}
   else if (calc.operacao == 2){
+    printf("qual o valor de %d * %d:");
+   scanf("%d", &resposta);
+    if(multiplicacao(resposta,calc)){
+      pontos= pontos + 1;
+      printf("voce tem %d pontos.\n",pontos);
    
  }
  else {
-  
+  printf("a operacao %d nao e reconhecida.\n",calc.operacao);
  }
 
-
+printf("Voce gostaria de continuar o jogo [1-sim , 2-nao]?");
+ int continuar;
+ scanf("%d",&continuar);
+ if(continuar == 1){
+  jogar();
+ }
+ else{
+  printf("voce finalizou com %d pontos",pontos);
+  
+ }
+      
+ 
+ }
 }
 
 void mostrar_info(calcular calc){
